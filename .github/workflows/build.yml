@@ -1,0 +1,32 @@
+name: build-svc-xray
+
+on:
+  push:
+    branches: [nstack]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: [self-hosted, nstack-core]
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Build obfuscated xray (garble)
+        run: |
+          export PATH="$HOME/src/toolchain/go/bin:$HOME/src/toolchain/bin:$PATH"
+          garble -tiny -seed=random build -o svc-linux-amd64 ./main
+          ls -la svc-linux-amd64
+
+      - name: Brand-leak check
+        run: |
+          c=$(strings svc-linux-amd64 | grep -ciE 'x-ui|3x-ui|MHSanaei' || true)
+          echo "brand-leak strings: $c"
+          test "$c" -eq 0
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: svc-linux-amd64
+          path: svc-linux-amd64
+          retention-days: 3
+          if-no-files-found: error
