@@ -7,10 +7,10 @@ import (
 
 var cmdSysStats = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api statssys [--server=127.0.0.1:8080]",
+	UsageLine:   "svc api statssys [--server=127.0.0.1:8080]",
 	Short:       "Retrieve system statistics",
 	Long: `
-Retrieve system statistics from Xray.
+Retrieve system statistics from svc.
 
 Arguments:
 
@@ -22,7 +22,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080
+	svc svc --server=127.0.0.1:8080
 `,
 	Run: executeSysStats,
 }

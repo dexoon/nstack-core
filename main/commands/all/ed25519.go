@@ -10,7 +10,7 @@ import (
 )
 
 var cmdEd25519 = &base.Command{
-	UsageLine: `{{.Exec}} ed25519 [-i "private key seed (Base64URL)"]`,
+	UsageLine: `svc ed25519 [-i "private key seed (Base64URL)"]`,
 	Short:     "Generate an Ed25519 key pair",
 	Long: `
 Generate an Ed25519 key pair, or restore it from a 32-byte private key seed

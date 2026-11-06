@@ -10,14 +10,14 @@ import (
 )
 
 var cmdMLDSA65 = &base.Command{
-	UsageLine: `{{.Exec}} mldsa65 [-i "seed (base64.RawURLEncoding)"]`,
+	UsageLine: `svc mldsa65 [-i "seed (base64.RawURLEncoding)"]`,
 	Short:     `Generate key pair for ML-DSA-65 post-quantum signature (REALITY)`,
 	Long: `
 Generate key pair for ML-DSA-65 post-quantum signature (REALITY).
 
-Random: {{.Exec}} mldsa65
+Random: svc mldsa65
 
-From seed: {{.Exec}} mldsa65 -i "seed (base64.RawURLEncoding)"
+From seed: svc mldsa65 -i "seed (base64.RawURLEncoding)"
 `,
 }
 

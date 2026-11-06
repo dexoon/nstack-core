@@ -11,10 +11,10 @@ import (
 
 var cmdAddOutbounds = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api ado [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
+	UsageLine:   "svc api ado [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
 	Short:       "Add outbounds",
 	Long: `
-Add outbounds to Xray.
+Add outbounds to svc.
 
 Arguments:
 
@@ -26,7 +26,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 c1.json c2.json
+	svc svc --server=127.0.0.1:8080 c1.json c2.json
 `,
 	Run: executeAddOutbounds,
 }

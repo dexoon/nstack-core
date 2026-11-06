@@ -12,10 +12,10 @@ import (
 
 var cmdAddRules = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api adrules [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
+	UsageLine:   "svc api adrules [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
 	Short:       "Add routing rules",
 	Long: `
-Add routing rules to Xray.
+Add routing rules to svc.
 
 Arguments:
 	<c1.json> [c2.json]...
@@ -32,7 +32,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 c1.json c2.json
+	svc svc --server=127.0.0.1:8080 c1.json c2.json
 `,
 	Run: executeAddRules,
 }

@@ -7,7 +7,7 @@ import (
 
 var cmdInboundUser = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api inbounduser [--server=127.0.0.1:8080] -tag=tag [-email=email]",
+	UsageLine:   "svc api inbounduser [--server=127.0.0.1:8080] -tag=tag [-email=email]",
 	Short:       "Retrieve inbound user(s)",
 	Long: `
 Get User info from an inbound.
@@ -28,8 +28,8 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -tag="tag name"
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -tag="tag name" -email="xray@love.com"
+	svc svc --server=127.0.0.1:8080 -tag="tag name"
+	svc svc --server=127.0.0.1:8080 -tag="tag name" -email="xray@love.com"
 `,
 	Run: executeInboundUser,
 }

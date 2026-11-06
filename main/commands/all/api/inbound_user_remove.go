@@ -11,7 +11,7 @@ import (
 
 var cmdRemoveInboundUsers = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api rmu [--server=127.0.0.1:8080] -tag=tag <email1> [email2]...",
+	UsageLine:   "svc api rmu [--server=127.0.0.1:8080] -tag=tag <email1> [email2]...",
 	Short:       "Remove users from inbounds",
 	Long: `
 Remove users from inbounds.
@@ -23,7 +23,7 @@ Arguments:
 	-tag
 		Inbound tag
 Example:
-    {{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -tag="vless-in" "xray@love.com" ...
+    svc svc --server=127.0.0.1:8080 -tag="vless-in" "xray@love.com" ...
 `,
 	Run: executeRemoveUsers,
 }

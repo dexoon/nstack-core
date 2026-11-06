@@ -25,7 +25,7 @@ import (
 
 var cmdAddInboundUsers = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api adu [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
+	UsageLine:   "svc api adu [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
 	Short:       "Add users to inbounds",
 	Long: `
 Add users to inbounds.
@@ -35,7 +35,7 @@ Arguments:
 	-t, -timeout
 		Timeout seconds to call API. Default 3
 Example:
-    {{.Exec}} {{.LongName}} --server=127.0.0.1:8080  c1.json c2.json
+    svc svc --server=127.0.0.1:8080  c1.json c2.json
 `,
 	Run: executeAddInboundUsers,
 }

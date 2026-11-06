@@ -7,10 +7,10 @@ import (
 
 var cmdOnlineStatsIpList = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api statsonlineiplist [--server=127.0.0.1:8080] [-email '' | -all [-include-traffic] [-reset]]",
+	UsageLine:   "svc api statsonlineiplist [--server=127.0.0.1:8080] [-email '' | -all [-include-traffic] [-reset]]",
 	Short:       "Retrieve a user's online IP addresses and access times",
 	Long: `
-Retrieve the online IP addresses and corresponding access timestamps for a user from Xray.
+Retrieve the online IP addresses and corresponding access timestamps for a user from svc.
 Use -all to retrieve all online users with their IPs and timestamps.
 
 Arguments:
@@ -35,9 +35,9 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -email "xray@love.com"
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -all
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -all -include-traffic
+	svc svc --server=127.0.0.1:8080 -email "xray@love.com"
+	svc svc --server=127.0.0.1:8080 -all
+	svc svc --server=127.0.0.1:8080 -all -include-traffic
 `,
 	Run: executeOnlineStatsIpList,
 }

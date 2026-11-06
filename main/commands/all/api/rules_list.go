@@ -7,10 +7,10 @@ import (
 
 var cmdListRules = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api lsrules [--server=127.0.0.1:8080]",
+	UsageLine:   "svc api lsrules [--server=127.0.0.1:8080]",
 	Short:       "List routing rules",
 	Long: `
-List routing rules in Xray.
+List routing rules in svc.
 
 Arguments:
 
@@ -22,7 +22,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080
+	svc svc --server=127.0.0.1:8080
 `,
 	Run: executeListRules,
 }

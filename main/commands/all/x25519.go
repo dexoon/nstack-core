@@ -5,15 +5,15 @@ import (
 )
 
 var cmdX25519 = &base.Command{
-	UsageLine: `{{.Exec}} x25519 [-i "private key (base64.RawURLEncoding)"] [--std-encoding]`,
+	UsageLine: `svc x25519 [-i "private key (base64.RawURLEncoding)"] [--std-encoding]`,
 	Short:     `Generate key pair for X25519 key exchange (REALITY, VLESS Encryption)`,
 	Long: `
 Generate key pair for X25519 key exchange (REALITY, VLESS Encryption).
 
-Random: {{.Exec}} x25519
+Random: svc x25519
 
-From private key: {{.Exec}} x25519 -i "private key (base64.RawURLEncoding)"
-For Std Encoding: {{.Exec}} x25519 --std-encoding
+From private key: svc x25519 -i "private key (base64.RawURLEncoding)"
+For Std Encoding: svc x25519 --std-encoding
 `,
 }
 

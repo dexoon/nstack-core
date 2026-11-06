@@ -16,15 +16,15 @@ import (
 )
 
 var cmdECH = &base.Command{
-	UsageLine: `{{.Exec}} tls ech [--serverName (string)] [--pem] [-i "ECHServerKeys (base64.StdEncoding)"]`,
+	UsageLine: `svc tls ech [--serverName (string)] [--pem] [-i "ECHServerKeys (base64.StdEncoding)"]`,
 	Short:     `Generate TLS-ECH certificates`,
 	Long: `
 Generate TLS-ECH certificates.
 
-Set serverName to your custom string: {{.Exec}} tls ech --serverName (string)
-Generate into pem format: {{.Exec}} tls ech --pem
-Restore ECHConfigs from ECHServerKeys: {{.Exec}} tls ech -i "ECHServerKeys (base64.StdEncoding)"
-`, // Enable PQ signature schemes: {{.Exec}} tls ech --pq-signature-schemes-enabled
+Set serverName to your custom string: svc tls ech --serverName (string)
+Generate into pem format: svc tls ech --pem
+Restore ECHConfigs from ECHServerKeys: svc tls ech -i "ECHServerKeys (base64.StdEncoding)"
+`, // Enable PQ signature schemes: svc tls ech --pq-signature-schemes-enabled
 }
 
 func init() {

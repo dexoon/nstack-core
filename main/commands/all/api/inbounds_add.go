@@ -11,10 +11,10 @@ import (
 
 var cmdAddInbounds = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api adi [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
+	UsageLine:   "svc api adi [--server=127.0.0.1:8080] <c1.json> [c2.json]...",
 	Short:       "Add inbounds",
 	Long: `
-Add inbounds to Xray.
+Add inbounds to svc.
 
 Arguments:
 
@@ -26,7 +26,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 c1.json c2.json
+	svc svc --server=127.0.0.1:8080 c1.json c2.json
 `,
 	Run: executeAddInbounds,
 }

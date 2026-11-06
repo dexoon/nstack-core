@@ -19,7 +19,7 @@ import (
 
 // cmdPing is the tls ping command
 var cmdPing = &base.Command{
-	UsageLine: "{{.Exec}} tls ping [-ip <ip>] <domain>",
+	UsageLine: "svc tls ping [-ip <ip>] <domain>",
 	Short:     "Ping the domain with TLS handshake",
 	Long: `
 Ping the domain with TLS handshake.

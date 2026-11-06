@@ -7,7 +7,7 @@ import (
 
 var cmdInboundUserCount = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api inboundusercount [--server=127.0.0.1:8080] -tag=tag",
+	UsageLine:   "svc api inboundusercount [--server=127.0.0.1:8080] -tag=tag",
 	Short:       "Retrieve inbound user count",
 	Long: `
 Retrieve the user count for a specified inbound tag.
@@ -25,7 +25,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -tag="tag name"
+	svc svc --server=127.0.0.1:8080 -tag="tag name"
 `,
 	Run: executeInboundUserCount,
 }

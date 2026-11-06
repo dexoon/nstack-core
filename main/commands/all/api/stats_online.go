@@ -7,10 +7,10 @@ import (
 
 var cmdOnlineStats = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api statsonline [--server=127.0.0.1:8080] [-email '']",
+	UsageLine:   "svc api statsonline [--server=127.0.0.1:8080] [-email '']",
 	Short:       "Retrieve the online session count for a user",
 	Long: `
-Retrieve the current number of active sessions for a user from Xray.
+Retrieve the current number of active sessions for a user from svc.
 
 Arguments:
 
@@ -25,7 +25,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -email "xray@love.com"
+	svc svc --server=127.0.0.1:8080 -email "xray@love.com"
 `,
 	Run: executeOnlineStats,
 }

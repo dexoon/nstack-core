@@ -13,7 +13,7 @@ import (
 
 var cmdJson = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} convert json [-type] [stdin:] [typedMessage file] ",
+	UsageLine:   "svc convert json [-type] [stdin:] [typedMessage file] ",
 	Short:       "Convert typedMessage to json",
 	Long: `
 Convert ONE typedMessage to json.
@@ -32,7 +32,7 @@ Arguments:
 
 Examples:
 
-    {{.Exec}} convert json user.tmsg
+    svc convert json user.tmsg
 	`,
 	Run: executeTypedMessageToJson,
 }

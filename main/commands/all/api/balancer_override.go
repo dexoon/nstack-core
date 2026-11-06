@@ -7,7 +7,7 @@ import (
 
 var cmdBalancerOverride = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api bo [--server=127.0.0.1:8080] <-b balancer> outboundTag <-r>",
+	UsageLine:   "svc api bo [--server=127.0.0.1:8080] <-b balancer> outboundTag <-r>",
 	Short:       "Override balancer",
 	Long: `
 Override the selection target of a balancer.
@@ -31,8 +31,8 @@ Arguments:
 
 Example:
 
-    {{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -b balancer tag
-    {{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -b balancer -r
+    svc svc --server=127.0.0.1:8080 -b balancer tag
+    svc svc --server=127.0.0.1:8080 -b balancer -r
 `,
 	Run: executeBalancerOverride,
 }

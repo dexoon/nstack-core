@@ -7,10 +7,10 @@ import (
 
 var cmdQueryStats = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api statsquery [--server=127.0.0.1:8080] [-pattern '']",
+	UsageLine:   "svc api statsquery [--server=127.0.0.1:8080] [-pattern '']",
 	Short:       "Query statistics",
 	Long: `
-Query statistics from Xray.
+Query statistics from svc.
 
 Arguments:
 
@@ -28,7 +28,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -pattern "counter_"
+	svc svc --server=127.0.0.1:8080 -pattern "counter_"
 `,
 	Run: executeQueryStats,
 }

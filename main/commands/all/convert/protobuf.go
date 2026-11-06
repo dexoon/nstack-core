@@ -14,7 +14,7 @@ import (
 
 var cmdProtobuf = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} convert pb [-outpbfile file] [-debug] [-type] [json file] [json file] ...",
+	UsageLine:   "svc convert pb [-outpbfile file] [-debug] [-type] [json file] [json file] ...",
 	Short:       "Convert multiple json configs to protobuf",
 	Long: `
 Convert multiple configs to ProtoBuf. JSON, YAML and TOML can be used.
@@ -34,8 +34,8 @@ Arguments:
 
 Examples:
 
-    {{.Exec}} convert pb -outpbfile output.pb config.json c1.json c2.json c3.json
-    {{.Exec}} convert pb -debug mix.pb
+    svc convert pb -outpbfile output.pb config.json c1.json c2.json c3.json
+    svc convert pb -debug mix.pb
 	`,
 	Run: executeConvertConfigsToProtobuf,
 }

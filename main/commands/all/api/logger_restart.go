@@ -7,10 +7,10 @@ import (
 
 var cmdRestartLogger = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api restartlogger [--server=127.0.0.1:8080]",
+	UsageLine:   "svc api restartlogger [--server=127.0.0.1:8080]",
 	Short:       "Restart the logger",
 	Long: `
-Restart the logger of Xray.
+Restart the logger of svc.
 
 Arguments:
 
@@ -22,7 +22,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080
+	svc svc --server=127.0.0.1:8080
 `,
 	Run: executeRestartLogger,
 }

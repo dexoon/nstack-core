@@ -7,10 +7,10 @@ import (
 
 var cmdListInbounds = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api lsi [--server=127.0.0.1:8080] [--isOnlyTags=true]",
+	UsageLine:   "svc api lsi [--server=127.0.0.1:8080] [--isOnlyTags=true]",
 	Short:       "List inbounds",
 	Long: `
-List inbounds in Xray.
+List inbounds in svc.
 
 Arguments:
 
@@ -22,7 +22,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080
+	svc svc --server=127.0.0.1:8080
 `,
 	Run: executeListInbounds,
 }

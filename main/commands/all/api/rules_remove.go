@@ -9,10 +9,10 @@ import (
 
 var cmdRemoveRules = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api rmrules [--server=127.0.0.1:8080] [ruleTag]...",
+	UsageLine:   "svc api rmrules [--server=127.0.0.1:8080] [ruleTag]...",
 	Short:       "Remove routing rules by ruleTag",
 	Long: `
-Remove routing rules by ruleTag from Xray.
+Remove routing rules by ruleTag from svc.
 
 Arguments:
 
@@ -24,7 +24,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 ruleTag1 ruleTag2
+	svc svc --server=127.0.0.1:8080 ruleTag1 ruleTag2
 `,
 	Run: executeRemoveRules,
 }

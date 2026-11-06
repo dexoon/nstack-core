@@ -11,7 +11,7 @@ import (
 )
 
 var cmdDecode = &base.Command{
-	UsageLine: "{{.Exec}} base64 decode [-gzip] <value | - | stdin:> [output-file]",
+	UsageLine: "svc base64 decode [-gzip] <value | - | stdin:> [output-file]",
 	Short:     "Decode Base64",
 	Long: fmt.Sprintf(`
 Decode a Base64 value, or pass "-" or "stdin:" to read stdin.
@@ -20,8 +20,8 @@ Accepts %s, %s, or no prefix; gzip is enabled by %s or -gzip.
 
 Examples:
 
-	{{.Exec}} base64 decode eA== out.bin
-	{{.Exec}} base64 decode -gzip H4sIAAAAAAAC/6sAAIMW3IwBAAAA out.bin
+	svc base64 decode eA== out.bin
+	svc base64 decode -gzip H4sIAAAAAAAC/6sAAIMW3IwBAAAA out.bin
 `, xbase64.Prefix, xbase64.GzipPrefix, xbase64.GzipPrefix),
 }
 

@@ -7,10 +7,10 @@ import (
 
 var cmdGetStats = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api stats [--server=127.0.0.1:8080] [-name '']",
+	UsageLine:   "svc api stats [--server=127.0.0.1:8080] [-name '']",
 	Short:       "Retrieve statistics",
 	Long: `
-Retrieve the statistics from Xray.
+Retrieve the statistics from svc.
 
 Arguments:
 
@@ -28,7 +28,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -name "inbound>>>statin>>>traffic>>>downlink"
+	svc svc --server=127.0.0.1:8080 -name "inbound>>>statin>>>traffic>>>downlink"
 `,
 	Run: executeGetStats,
 }

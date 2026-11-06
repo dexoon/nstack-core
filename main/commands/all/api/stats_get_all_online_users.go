@@ -7,7 +7,7 @@ import (
 
 var cmdGetAllOnlineUsers = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api statsgetallonlineusers [--server=127.0.0.1:8080]",
+	UsageLine:   "svc api statsgetallonlineusers [--server=127.0.0.1:8080]",
 	Short:       "Retrieve array of all online users",
 	Long: `
 Retrieve array of all online users.
@@ -22,7 +22,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080"
+	svc svc --server=127.0.0.1:8080"
 `,
 	Run: executeGetAllOnlineUsers,
 }

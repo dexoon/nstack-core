@@ -9,7 +9,7 @@ import (
 )
 
 var cmdVLESSEnc = &base.Command{
-	UsageLine: `{{.Exec}} vlessenc`,
+	UsageLine: `svc vlessenc`,
 	Short:     `Generate decryption/encryption json pair (VLESS Encryption)`,
 	Long: `
 Generate decryption/encryption json pair (VLESS Encryption).

@@ -10,7 +10,7 @@ import (
 )
 
 var cmdEncode = &base.Command{
-	UsageLine: "{{.Exec}} base64 encode [-gzip] <input-file | - | stdin:>",
+	UsageLine: "svc base64 encode [-gzip] <input-file | - | stdin:>",
 	Short:     "Encode as Base64",
 	Long: fmt.Sprintf(`
 Encode input-file as Base64 with the %s prefix.
@@ -19,8 +19,8 @@ Use -gzip to compress and output %s.
 
 Examples:
 
-	{{.Exec}} base64 encode input.bin
-	{{.Exec}} base64 encode -gzip input.bin
+	svc base64 encode input.bin
+	svc base64 encode -gzip input.bin
 `, xbase64.Prefix, xbase64.GzipPrefix),
 }
 

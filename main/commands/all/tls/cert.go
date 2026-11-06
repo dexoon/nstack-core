@@ -16,7 +16,7 @@ import (
 
 // cmdCert is the tls cert command
 var cmdCert = &base.Command{
-	UsageLine: "{{.Exec}} tls cert [--ca] [--domain=example.com] [--expire=240h]",
+	UsageLine: "svc tls cert [--ca] [--domain=example.com] [--expire=240h]",
 	Short:     "Generate TLS certificates",
 	Long: `
 Generate TLS certificates.
@@ -57,8 +57,8 @@ var (
 		return true
 	}()
 
-	certCommonName   = cmdCert.Flag.String("name", "Xray Inc", "The common name of this certificate")
-	certOrganization = cmdCert.Flag.String("org", "Xray Inc", "Organization of the certificate")
+	certCommonName   = cmdCert.Flag.String("name", "svc Inc", "The common name of this certificate")
+	certOrganization = cmdCert.Flag.String("org", "svc Inc", "Organization of the certificate")
 	certIsCA         = cmdCert.Flag.Bool("ca", false, "Whether this certificate is a CA")
 	certJSONOutput   = cmdCert.Flag.Bool("json", true, "Print certificate in JSON format")
 	certFileOutput   = cmdCert.Flag.String("file", "", "Save certificate in file.")

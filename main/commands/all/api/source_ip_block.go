@@ -13,7 +13,7 @@ import (
 
 var cmdSourceIpBlock = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api sib [--server=127.0.0.1:8080] -outbound=blocked -inbound=socks 1.2.3.4",
+	UsageLine:   "svc api sib [--server=127.0.0.1:8080] -outbound=blocked -inbound=socks 1.2.3.4",
 	Short:       "Block connections by source IP",
 	Long: `
 Block connections by source IP address.
@@ -40,8 +40,8 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -outbound=blocked -inbound=socks 1.2.3.4
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 -outbound=blocked -inbound=socks 1.2.3.4 -reset
+	svc svc --server=127.0.0.1:8080 -outbound=blocked -inbound=socks 1.2.3.4
+	svc svc --server=127.0.0.1:8080 -outbound=blocked -inbound=socks 1.2.3.4 -reset
 `,
 	Run: executeSourceIpBlock,
 }

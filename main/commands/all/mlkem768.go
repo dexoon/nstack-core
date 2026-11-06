@@ -11,14 +11,14 @@ import (
 )
 
 var cmdMLKEM768 = &base.Command{
-	UsageLine: `{{.Exec}} mlkem768 [-i "seed (base64.RawURLEncoding)"]`,
+	UsageLine: `svc mlkem768 [-i "seed (base64.RawURLEncoding)"]`,
 	Short:     `Generate key pair for ML-KEM-768 post-quantum key exchange (VLESS Encryption)`,
 	Long: `
 Generate key pair for ML-KEM-768 post-quantum key exchange (VLESS Encryption).
 
-Random: {{.Exec}} mlkem768
+Random: svc mlkem768
 
-From seed: {{.Exec}} mlkem768 -i "seed (base64.RawURLEncoding)"
+From seed: svc mlkem768 -i "seed (base64.RawURLEncoding)"
 `,
 }
 

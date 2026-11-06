@@ -10,11 +10,11 @@ import (
 )
 
 var cmdSign = &base.Command{
-	UsageLine: "{{.Exec}} lua sign [-key seed] [-o output-file] <input-file>",
+	UsageLine: "svc lua sign [-key seed] [-o output-file] <input-file>",
 	Short:     "Sign a local Lua script for privileged execution",
 	Long: `
 Sign a local Lua file using a 32-byte Ed25519 private key seed in unpadded
-Base64URL. Use {{.Exec}} ed25519 to generate a key pair.
+Base64URL. Use svc ed25519 to generate a key pair.
 Write back to the input file, or use -o to write another file (- for stdout).
 `,
 }

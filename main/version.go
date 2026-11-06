@@ -8,9 +8,9 @@ import (
 )
 
 var cmdVersion = &base.Command{
-	UsageLine: "{{.Exec}} version",
-	Short:     "Show current version of Xray",
-	Long: `Version prints the build information for Xray executables.
+	UsageLine: "svc version",
+	Short:     "Show current version of svc",
+	Long: `Version prints the build information for svc executables.
 	`,
 	Run: executeVersion,
 }

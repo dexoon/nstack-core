@@ -12,7 +12,7 @@ import (
 // TODO: support "-json" flag for json output
 var cmdBalancerInfo = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api bi [--server=127.0.0.1:8080] [balancer]...",
+	UsageLine:   "svc api bi [--server=127.0.0.1:8080] [balancer]...",
 	Short:       "Retrieve balancer information",
 	Long: `
 Retrieve information of specified balancers, including health, strategy and selecting.
@@ -30,7 +30,7 @@ Arguments:
 
 Example:
 
-    {{.Exec}} {{.LongName}} --server=127.0.0.1:8080 balancer1 balancer2
+    svc svc --server=127.0.0.1:8080 balancer1 balancer2
 `,
 	Run: executeBalancerInfo,
 }

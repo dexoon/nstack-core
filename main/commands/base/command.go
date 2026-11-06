@@ -24,7 +24,7 @@ type Command struct {
 	// UsageLine is the one-line usage message.
 	// The words between the first word (the "executable name") and the first flag or argument in the line are taken to be the command name.
 	//
-	// UsageLine supports go template syntax. It's recommended to use "{{.Exec}}" instead of hardcoding name
+	// UsageLine supports go template syntax. It's recommended to use "svc" instead of hardcoding name
 	UsageLine string
 
 	// Short is the short description shown in the 'go help' output.
@@ -34,7 +34,7 @@ type Command struct {
 
 	// Long is the long message shown in the 'go help <this-command>' output.
 	//
-	// Long supports go template syntax. It's recommended to use "{{.Exec}}", "{{.LongName}}" instead of hardcoding strings
+	// Long supports go template syntax. It's recommended to use "svc", "svc" instead of hardcoding strings
 	Long string
 
 	// Flag is a set of flags specific to this command.
@@ -77,7 +77,7 @@ func (c *Command) Name() string {
 func (c *Command) Usage() {
 	buildCommandText(c)
 	fmt.Fprintf(os.Stderr, "usage: %s\n", c.UsageLine)
-	fmt.Fprintf(os.Stderr, "Run 'xray help %s' for details.\n", c.LongName())
+	fmt.Fprintf(os.Stderr, "Run 'svc help %s' for details.\n", c.LongName())
 	SetExitStatus(2)
 	Exit()
 }

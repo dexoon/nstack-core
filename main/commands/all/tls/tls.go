@@ -6,9 +6,9 @@ import (
 
 // CmdTLS holds all tls sub commands
 var CmdTLS = &base.Command{
-	UsageLine: "{{.Exec}} tls",
+	UsageLine: "svc tls",
 	Short:     "TLS tools",
-	Long: `{{.Exec}} {{.LongName}} provides tools for TLS.
+	Long: `svc svc provides tools for TLS.
 `,
 	Commands: []*base.Command{
 		cmdCert,

@@ -10,10 +10,10 @@ import (
 
 var cmdRemoveOutbounds = &base.Command{
 	CustomFlags: true,
-	UsageLine:   "{{.Exec}} api rmo [--server=127.0.0.1:8080] <json_file|tag> [json_file] [tag]...",
+	UsageLine:   "svc api rmo [--server=127.0.0.1:8080] <json_file|tag> [json_file] [tag]...",
 	Short:       "Remove outbounds",
 	Long: `
-Remove outbounds from Xray.
+Remove outbounds from svc.
 
 Arguments:
 
@@ -25,7 +25,7 @@ Arguments:
 
 Example:
 
-	{{.Exec}} {{.LongName}} --server=127.0.0.1:8080 c1.json "tag name"
+	svc svc --server=127.0.0.1:8080 c1.json "tag name"
 `,
 	Run: executeRemoveOutbounds,
 }

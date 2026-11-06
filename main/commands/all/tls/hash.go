@@ -14,7 +14,7 @@ import (
 )
 
 var cmdHash = &base.Command{
-	UsageLine: "{{.Exec}} tls hash",
+	UsageLine: "svc tls hash",
 	Short:     "Calculate TLS certificate hash.",
 	Long: `
 	xray tls hash --cert <cert.pem>
