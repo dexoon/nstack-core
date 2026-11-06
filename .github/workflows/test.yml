@@ -2,6 +2,7 @@ name: Tests and Checkings
 
 on:
   push:
+    branches: ["__nstack-fork-disabled__"] # nstack fork: upstream CI disabled, builds run on the dell self-hosted runner
   pull_request:
     types: [opened, synchronize, reopened]
 
